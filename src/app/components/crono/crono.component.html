@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="screen">
+        {{cont}}
+        @if(cont!=1){
+            segundos.
+        } @else {
+            segundo.
+        }  
+
+    </div> 
+    
+    <div class="buttons">
+        @if(isPaused){
+            <button (click)="play()">></button>
+        } @else {
+            <button (click)="pause()">||</button>
+        }
+        <button (click)="reset()">#</button>
+    </div>
+</div>

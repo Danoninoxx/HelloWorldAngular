@@ -1,0 +1,14 @@
+<h1>TO DO</h1>
+<ul>
+    @if(todo.length>0){
+        @for(task of todo;track task.id){
+            <li>{{task.title}} <button class="edit-button" (click)="inputEdit(task.id)">✎</button><button class="delete-button" (click)="removeTask(task.id)">X</button></li>
+        }
+    }
+    @else{
+        <p>No hay tareas que mostrar</p>
+    }
+    
+</ul>
+<hr>
+<app-create-task (taskCreated)="addTask($event)"></app-create-task>
